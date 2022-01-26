@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  SafeAreaView,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 
 export const WorkSpace = (props) => {
   return (
-    <View>
+    <SafeAreaView>
       <View style={styles.workSpace}>
         <TouchableOpacity>
           <Image
@@ -13,17 +19,16 @@ export const WorkSpace = (props) => {
           />
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  workSpace: {},
+  workSpace: {
+    backgroundColor: '#222223',
+  },
   image: {
     height: 75,
     width: 75,
-    position: 'absolute',
-    top: 210,
-    left: 279,
   },
 });

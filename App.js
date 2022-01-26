@@ -4,27 +4,23 @@ import { StyleSheet, View, Image } from 'react-native';
 import { TopMenu } from './src/TopMenu';
 import Footer from './src/Footer';
 import { WorkSpace } from './src/WorkSpace';
-import LinearGradient from 'react-native-linear-gradient';
 
 export default function App() {
   return (
-    <View style={styles.view}>
-      <TopMenu />
-      <WorkSpace />
-      <Footer />
+    <View>
+      <View style={styles.view}>
+        <TopMenu style={{ flex: 1 }} />
+        <WorkSpace style={{ flex: 3 }} />
+        <Footer style={{ flex: 1 }} />
+      </View>
     </View>
   );
 }
 //Добавить градиент как нибудь
 const styles = StyleSheet.create({
   view: {
-    height: '100%',
-    width: '100%',
-    backgroundColor: '#242426',
+    flex: 1,
+
     justifyContent: 'space-between',
-  },
-  image: {
-    width: 100,
-    height: 100,
   },
 });
